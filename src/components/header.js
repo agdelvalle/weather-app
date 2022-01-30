@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 export const Header = () => {
     return(
-        <header>
+        <div className="header">
             <ul>
-                <a><li>Home</li></a>
-                <a><li>Search</li></a>
+                <a href="https://github.com/agdelvalle/" target="_blank"><li>Home</li></a>
+                <a href="https://www.metaweather.com/about/" target="_blank"><li>Metaweather API</li></a>
             </ul>
-        </header>
+        </div>
     )
 }

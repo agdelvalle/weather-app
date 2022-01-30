@@ -9,6 +9,90 @@ body{
     background-color: darkcyan;
 }
 
+.weekly{
+    color: red;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainContent {
+    margin: 0 15%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.mainContent h1{
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.header {
+    width: 100%;
+    padding: 1%;
+    font-weight: bold;
+    color: white;
+}
+
+.header ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header li {
+    list-style-type: none;
+    color: white;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.header li:hover{
+    color:lightskyblue;
+}
+
 .item-report{
     border: 1px solid black;
+}
+
+.forecastReport{
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+    margin: 2% 0;
+    background-color: lightslategray;
+}
+
+.forecastReport .right{
+    text-align: left;
+}
+
+.btnsContainer{
+    margin: 2% 0;
+}
+
+.popCities{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.locButton {
+    height: 250px;
+    width: 150px;
+    background-color: magenta;
+}
+
+.loadSpin{
+    border: 3px solid lightslategray;
+    border-radius: 50%;
+    width: 150px;
+    padding: 5%
 }
