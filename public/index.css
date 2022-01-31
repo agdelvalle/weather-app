@@ -4,16 +4,14 @@ padding: 0;
 box-sizing: border-box;
 }
 
-html {
-    background: rgb(0,67,126);
-    background: linear-gradient(180deg, rgba(0,67,126,1) 0%, rgba(6,11,41,1) 100%);
+body {
+    /* background: rgb(0,67,126);
+    background: linear-gradient(180deg, rgba(0,67,126,1) 0%, rgba(6,11,41,1) 100%); */
+    background-color: #00437e;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    font-family: sans-serif;
-    /* background-color: #001a31; */
-}
 
 .header {
     width: 100%;
@@ -46,6 +44,9 @@ body{
     margin: 0 15%;
     margin-top: 2%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mainContent h1, .mainContent h2{
@@ -173,7 +174,7 @@ form, form input {
 
 .search-form button:hover {
     background-image: none;
-    background-color: mediumseagreen;
+    background-color: turquoise;
 }
 
 .popCities{
@@ -190,14 +191,33 @@ form, form input {
     color: white;
     font-weight: bold;
     /* flex-grow: 1; */
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+
+@keyframes example {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .loadSpin{
-    border: 3px solid lightslategray;
     border-radius: 50%;
-    width: 150px;
-    padding: 5%
+    width: 100px;
+    height: 100px;
+    padding: 5%;
+    margin-left: 45%;
+    border: 10px solid;
+    border-color: turquoise whitesmoke lightseagreen whitesmoke;
+    border-radius: 50%;
+    animation: example 2s linear infinite;
 }
+
 
 .London{
     background-image: url('./assets/london.jpg');
@@ -242,11 +262,16 @@ form, form input {
 .Tokyo:hover,
 .Manila:hover{
     background-image: none;
-    background-color: mediumseagreen;
+    background-color: turquoise;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media only screen and (min-width: 280px) and (max-width: 750px) {
+
+    .loadSpin{
+        margin-left: 25%;
+    }
+
     .locButton{
         width: 100%;
         /* height: 30%; */
@@ -273,6 +298,3 @@ form, form input {
         margin: 15px;
     }
 }
-
-
-@media only screen and (min-width: 750px) and (max-width: 920px) {}

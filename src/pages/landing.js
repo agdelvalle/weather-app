@@ -27,9 +27,9 @@ export const Landing = () => {
     <div className="mainContent">
             <h1>Weather Report</h1>
         <>
+        {isLoading && <LoadingSpin />}
         {!isLoading && isForecast &&
         <div className="reportContainer">
-                {isLoading && <LoadingSpin />}
             <div className="daily">
                 {isForecast && !isLoading && 
                 <Forecast 
