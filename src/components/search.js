@@ -11,13 +11,12 @@ export const Search = (props) => {
         props.func(SearchLocation)
     }
 
-    return (<>
+    return (<div className="search-form">
     <form onSubmit={onSubmitInput}>
-        <label htmlFor="search">Search by city</label>
-        <input type="text" id="search" onChange={(e) => {setSearchLocation(e.target.value)}}></input>   
+        <input type="text" id="search" placeholder="Search by city" onChange={(e) => {setSearchLocation(e.target.value)}}></input>   
         <button onClick={onSubmitInput}>Search</button>
     </form>
-    </>
+    </div>
     )
 }
 

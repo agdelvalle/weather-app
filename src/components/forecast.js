@@ -1,14 +1,13 @@
 export const Forecast = (props) => {
     // const imgUrl = `https://api.allorigins.win/raw?url=$`
-    return <div className="forecastReport">
+    const imgUrl = 'https://www.metaweather.com/static/img/weather/'
+
+    return <div className="daily-summary">
     {/* <h2>forecast works!</h2> */}
-    <div className="left">
-        <img src={props.icon} />
-    </div>
-    <div className="right">
-        <h1>{props.location}</h1>
+        <img src={`${imgUrl}${props.icon}.svg`} className="weatherIcon"/>
+        <h2>{props.location}</h2>
         <h2>{props.date}</h2>
-        <h1>{props.desc}</h1>
-    </div> 
+        <h4>{props.temp} C</h4>
+        <h4>{props.desc}</h4>
     </div>
 }

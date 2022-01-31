@@ -4,27 +4,15 @@ padding: 0;
 box-sizing: border-box;
 }
 
+html {
+    background: rgb(0,67,126);
+    background: linear-gradient(180deg, rgba(0,67,126,1) 0%, rgba(6,11,41,1) 100%);
+    height: 100%;
+}
+
 body{
     font-family: sans-serif;
-    background-color: darkcyan;
-}
-
-.weekly{
-    color: red;
-    font-size: 25px;
-    display: flex;
-    flex-direction: row;
-}
-
-.mainContent {
-    margin: 0 15%;
-    text-align: center;
-    margin-top: 2%;
-}
-
-.mainContent h1{
-    color: whitesmoke;
-    font-weight: bold;
+    /* background-color: #001a31; */
 }
 
 .header {
@@ -54,27 +42,138 @@ body{
     color:lightskyblue;
 }
 
+.mainContent {
+    margin: 0 15%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.mainContent h1, .mainContent h2{
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.reportContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: darkslategray;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    margin: 2% 0;
+    padding: 1%;
+    background-color: darkgray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.daily {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.daily-summary{
+    color: whitesmoke;
+}
+
+.daily-details{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.daily-details h2{
+    color: darkslategray;
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.regtxt{
+    font-weight: lighter;
+}
+
 .item-report{
     border: 1px solid black;
 }
 
-.forecastReport{
+.daily-summary{
     display: flex;
-    flex-direction: row;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 100%;
+    flex-direction: column;
     text-align: center;
-    border-radius: 30px;
-    margin: 2% 0;
-    background-color: lightslategray;
+    color:darkslategray;
+    align-items: center;
+    justify-content: center;
 }
 
-.forecastReport .right{
-    text-align: left;
+.weatherIcon{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.sm-weatherIcon{
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.weekly{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.week-day-report{
+    background-color: whitesmoke;
+    padding: 2%;
+    border-radius: 30px;
+    color: black;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnsContainer{
     margin: 2% 0;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.search-form > form > * {
+    margin-top: 10px;
+    padding: 15px;
+}
+
+form, form input {
+    width: 100%;
+}
+
+.search-form button {
+    border: none;
+    color: white;
+    background-color: lightslategray;
+}
+
+.search-form button:hover {
+    background-image: none;
+    background-color: mediumseagreen;
 }
 
 .popCities{
@@ -87,7 +186,10 @@ body{
 .locButton {
     height: 250px;
     width: 150px;
-    background-color: magenta;
+    border: none;
+    color: white;
+    font-weight: bold;
+    /* flex-grow: 1; */
 }
 
 .loadSpin{
@@ -96,3 +198,81 @@ body{
     width: 150px;
     padding: 5%
 }
+
+.London{
+    background-image: url('./assets/london.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Sydney{
+    background-image: url('./assets/sydney.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.New{
+    background-image: url('./assets/newyork.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Beijing{
+    background-image: url('./assets/beijing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Tokyo{
+    background-image: url('./assets/tokyo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Manila{
+    background-image: url('./assets/manila.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.London:hover,
+.Sydney:hover,
+.New:hover,
+.Beijing:hover,
+.Tokyo:hover,
+.Manila:hover{
+    background-image: none;
+    background-color: mediumseagreen;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 750px) {
+    .locButton{
+        width: 100%;
+        /* height: 30%; */
+    }
+
+    .popCities{
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .daily, .weekly, .daily-details, .detail {
+        flex-direction: column;
+    }
+
+    .daily-details{
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .week-day-report{
+        padding: 0;
+        margin: 15px;
+    }
+}
+
+
+@media only screen and (min-width: 750px) and (max-width: 920px) {}
