@@ -20,7 +20,8 @@ export const useForecast = () => {
         // console.log({data})  
 
         if(!data || data.length === 0){
-            setisError("No such location");
+            setisError(true);
+            setisLoading(false);
             return;
         }
         // console.log(data)
@@ -31,7 +32,8 @@ export const useForecast = () => {
         const {data} = await axios(`${PROXIED_URL}${woeid}`)
 
         if(!data || data.length === 0){
-            setisError("Something went wrong");
+            setisError(true);
+            setisLoading(false);
             return;
         }
         return {data}
@@ -57,7 +59,11 @@ export const useForecast = () => {
 
         const {data} = await getForecast(response[0].woeid)
         
-        if(!data || data.length === 0) return
+        if(!data || data.length === 0){
+            setisError(true);
+            setisLoading(false);
+            return;
+        }
         
         // setisLoading(false);
         gatherForecastData(data);

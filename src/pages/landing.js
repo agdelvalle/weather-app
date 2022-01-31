@@ -8,8 +8,6 @@ import { Forecast } from "../components/forecast";
 import { LoadingSpin } from "../components/loading";
 import { WeeklyForecast } from "../components/weekly-forecast";
 
-const displayLoc = document.querySelector("#location")
-
 export const Landing = () => {
     const {isLoading, isError, isForecast, submitReq} = useForecast();
 
@@ -28,6 +26,7 @@ export const Landing = () => {
             <h1>Weather Report</h1>
         <>
         {isLoading && <LoadingSpin />}
+        {isError && <h2>No such city found, please try again.</h2>}
         {!isLoading && isForecast &&
         <div className="reportContainer">
             <div className="daily">

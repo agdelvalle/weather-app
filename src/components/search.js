@@ -7,7 +7,7 @@ export const Search = (props) => {
 
     const onSubmitInput = (e) => {
         e.preventDefault();
-        if (!SearchLocation || SearchLocation == "") return
+        if (!SearchLocation || SearchLocation === "") return
         props.func(SearchLocation)
     }
 
